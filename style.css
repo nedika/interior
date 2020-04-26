@@ -1,0 +1,692 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* с помощью линий на всей странице можно проверить, если что-то криво */
+    /* outline: 1px solid red;  */   
+}
+
+/* Общие параметры для всей страницы */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Чтобы блоки не наезжали друг на друга */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*** ПЕРВЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+
+/* Задаем ширину страницы и отцентровку */
+.container {
+    margin: 0 auto;
+}
+
+/* Делаем отступы по бокам на странице */
+.padding-site {
+    padding-right: 98px;
+    padding-left: 98px;
+}
+
+/* Делаем отступ в самом верху страницы */
+.header {
+    padding-top: 63px;
+}
+
+/* Выравниваем меню по правую сторону */
+.menu {
+    float: right;
+}
+
+/* Убираем декорирование списков и выравниваем меню в одну линию */
+.menu-list {
+    list-style-type: none;
+    float: left;
+}
+
+/* Добавляем стилизацию для меню */
+.menu-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8c8c8c;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding: 10px 13px;
+}
+
+/* Добавляем смену цвета при наведении на текст в меню */
+.menu-link:hover {
+    color: #212121;
+}
+
+/* Добавляем активную выделенную вкладку в меню */
+.menu-link-active {
+    font-weight: 700;
+    color: #212121;
+    border-bottom: 3px solid #212121;
+    letter-spacing: 1.4px;
+}
+
+
+/** ПЕРВЫЙ БОЛЬШОЙ СЛАЙД **/
+/* Добавляем картинку на задний план у начального слайда */
+.slider {
+    height: 800px;
+    background-image: url("img/slider_img.jpg");
+    position: relative;
+    background-size: cover;
+}
+
+/* Опускаем вниз текст начального слайда от лого */
+.slider-text {
+    margin-top: 283px;
+}
+
+/* Добавляем стили для подзаголовка TRENDING */
+.slider-trenging {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #43a047;
+    margin-bottom: 8px;
+}
+
+/* Добавляем стили для заголовка FISHNET CHAIR */
+.slider-h2 {
+    font-size: 62px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+/* Добавляем стили для текста SEAT AND BACK WITH... */
+.slider-content {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6c6c6c;
+    line-height: 1.71;
+    width: 458px;
+    margin-bottom: 30px;
+}
+
+/* Добавляем стили для кнопки ORDER US (текст и форма) */
+.button {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #212121;
+    box-shadow: 0px 2px 5px 0px rgba(33,33,33,0.34);
+    width: 212px;
+    height: 45px;
+    line-height: 45px;
+    letter-spacing: 3.6px;
+    background-color: #ffffff;
+    border-radius: 22.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Добавляем эффект при наведении на кнопку ORDER US */
+.button:hover {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  5px 5px 8px #cccccc, 
+                 -5px -5px 8px #ffffff;
+    color: #43a047;
+}
+
+/* Делаем размер для иконки > внутри кнопки ORDER US, чтобы стрелка была на одном уровне с текстом */
+.arrow-button {
+    height: 13px;
+}
+
+/* Добавляем отступ для > внутри кнопки ORDER US */
+.button .arrow-button {
+    margin-left: 22px;
+}
+
+/* Размещаем нашу навигацию в виде кругов по центру и внизу слайда */
+.pagination {
+    position: absolute;
+    width: 1170px;
+    bottom: 19px;
+    text-align: center;
+}
+
+/* Создаем и стилизуем навигацию в виде кругов */
+.circle {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #c7c7c7;
+    border-radius: 20px;
+    margin: 3px;
+}
+
+/* Смена цвета при наведении на круги навигации */
+.circle:hover {
+    background-color: #43a047;
+}
+
+/* Выделяем активный слайд в круге навигации */
+.circle-active {
+    width: 40px;
+    height: 40px;
+    background-color: #212121;
+    margin-bottom: 0;
+}
+
+
+/*** ВТОРОЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+
+/* Стилизуем нижнюю линию для двух вкладок Featured и New */
+.featured-new {
+    border-bottom: 1px solid black;
+    padding-bottom: 13px;
+}
+
+/* Убираем декорирование у списков и выравниваем вкладки в одну линию */
+.menu-featured {
+    list-style-type: none;
+    float: left;
+}
+
+/* Стилизуем текст вкладок FEATURED и NEW */
+.menu-new {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #6c6c6c;
+    text-decoration: none;   
+    letter-spacing: 0.1em;
+    padding: 10px 13px;
+}
+
+/* Выделяем активную нажатую вкладку FEATURED */
+.menu-new-active {
+    font-weight: 700;
+    color: #212121;
+    border-bottom: 3px solid #212121;
+    letter-spacing: 1.4px;
+}
+
+/* Меняем цвет при наведении на вкладках FEATURED и NEW */
+.menu-new:hover {
+    color: #212121;
+    border-bottom: 3px solid #212121;
+}
+
+/* Добавляем отступ сверху для вкладок FEATURED и NEW от слайда */
+.section-header {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Стилизуем кнопку EXPLORE ALL */
+.section-header-link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 2.6px;
+    color: #212121;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Меняем цвет при наведении на кнопку EXPLORE ALL */
+.section-header-link:hover {
+    color: #8c8c8c;
+}
+
+/* Добавляем отступ иконки > для кнопки EXPLORE ALL */
+.section-header-link .arrow-button {
+margin-left: 12px;
+}
+
+
+
+/*** ВТОРОЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+/** СОЗДАЕМ КАРТИНКУ С ИНФО ПРИ НАВЕДЕНИИ **/
+
+/* Задаем позицию и размер у картинки */
+.tab-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 68px;
+    justify-content: space-between;
+}
+
+/* Задаем размеры всех картинок */
+.product-card {
+    position: relative;
+    height: 270px;
+    width: 270px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* для 4 блока */
+.product-card.size-l,
+.product-card.size-l img {
+    height: 370px;
+    width: 370px;
+    cursor: pointer;
+}
+
+/* Вкладываем текст внутир картинки, добавляем светлый фон */
+.product-card-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 62px;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    display: none;
+}
+
+/* Указываем параметры при наведении */
+.product-card:hover .product-card-description {
+    display: block;
+    outline: 1px solid #9c9c9c;
+}
+
+/* Стили для круглой кнопки внутри картинки */
+.product-card-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    box-shadow: 0px 2px 4.9px 0.2px rgba(33, 33, 33, 0.35);
+    background-color: #ffffff;
+    margin-bottom: 16px;
+}
+
+/* Стили для круглой кнопки при наведении */
+.product-card-button:hover {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  5px 5px 8px #cccccc, 
+                 -5px -5px 8px #ffffff;
+    color: #43a047;
+}
+
+/* Задаем стили для заголовка внутри картинки */
+.product-card-name {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.36;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+/* Задаем стили для текста внутри картинки */
+.product-card-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+    color: #6c6c6c;
+    letter-spacing: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*** ТРЕТИЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+
+/* Задаем отступ и параметр, чтобы картинки лежали на одной линии */
+.container3 {
+    display: flex;
+    margin-top: 128px;
+}
+
+/* Вырпавниваем блок */
+.slider-half {
+    width: 50%;
+    margin-top: 0;
+}
+
+/* Добавляем отступ у текста внутри каждых картинок */
+.slider-exclusive-content {
+    padding: 52px;
+}
+
+/* Стили для подзаголовка EXCLUSIVE */
+.slider-exclusive {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1e88e5;
+    padding-top: 283px;
+}
+
+/* Стили для заголовка FISHNET CHAIR */
+.slider-half .slider-h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: initial;
+}
+
+/* Картинки */
+.slider-exclusive-content {
+    height: 800px;
+    background-image: url("img/2-exclusive.jpg");
+    position: relative;
+    background-size: cover;
+}
+
+/* Картинки */
+.slider-exclusive-content2 {
+    background-image: url("img/1-exclusive.jpg");
+}
+
+
+
+
+/*** ЧЕТВЕРТЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+
+/* Стили для заголовка TRENDING PRODUCTS */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #212121;
+}
+
+
+
+/*** ПЯТЫЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+/** ВТОРОЙ БОЛЬШОЙ СЛАЙД **/
+
+/* Отступ */
+.slider-text-hot-deal {
+    margin-top: 120px;
+}
+
+/* Добавляем стили для подзаголовка HOT DEAL */
+.slider-trenging-hot-deal {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #e53935;
+    padding-top: 283px;
+}
+
+/* Добавляем картинку на задний план у второго слайда */
+.slider-hot-deal {
+    height: 800px;
+    background-image: url("img/slider_table.jpg");
+    position: relative;
+    background-size: cover;
+}
+
+
+
+
+/*** ШЕСТОЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+
+.container6 {
+    width: 1366px;
+    height: 810px;
+    margin: 0 auto;
+}
+
+.block7 {
+    width: 1366px;
+    height: 810px;
+}
+
+.tab-content2 {
+    width: 1170px;
+    height: 570px;
+    display: flex;
+    padding-top: 120px;
+}
+
+.big1 {
+    position: relative;
+    width: 570px;
+    height: 570px;
+    float: left;
+    background-image: url("img/product1lg.png");
+}
+
+.block7_text {
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 186px;
+    float: left;
+}
+
+.block3-exclusive {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.67;
+    letter-spacing: 1.8px;
+    color: #1e88e5;
+}
+
+.block3-h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.block3-content {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #6c6c6c;
+    margin-bottom: 30px;
+    width: 350px;
+}
+
+.big2 {
+    width: 570px;
+    height: 570px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.tab3,
+.tab4 {
+    display: flex;
+    width: 570px;
+    height: 270px;
+    float: right;
+}
+
+.tab3 {
+    margin-bottom: 30px;
+}
+
+.product-3-sm,
+.product-5-sm {
+    margin-left: 30px;
+}
+
+
+/*** СЕДЬМОЙ БЛОК ГЛАВНОЙ СТРАНИЦЫ ***/
+
+.block8 {
+    background-image: url("img/backimg.png");
+    height: 516px;
+    background-size: cover;
+}
+
+.mobile_app {
+    color: #6c6c6c;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-top: 125px;
+}
+
+.follow {
+    width: 472px;
+    color: #212121;
+    font-size: 62px;
+    font-weight: 100;
+    line-height: 72px;
+    text-transform: uppercase;
+}
+
+.share {
+    padding-top: 26px;
+    color: #6c6c6c;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 472px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button_appstore,
+.button_google {
+    width: 135px;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 33px;
+    cursor: pointer;
+}
+
+.button_appstore {
+    background-image: url("img/appstore.png");
+}
+
+.button_google {
+    background-image: url("img/googleplay.png");
+    margin-left: 10px;
+}
+
+
+/*** ПОДВАЛ ГЛАВНОЙ СТРАНИЦЫ ***/
+
+.footer {
+    background-color: #f7f7f7;
+    padding-top: 110px;
+}
+
+.footer-row,
+.footer-table {
+    display: flex;
+}
+
+.footer-info {
+    cursor: pointer;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+    letter-spacing: 1.8px;
+    color: #6c6c6c;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.footer-row {
+    justify-content: space-between;
+}
+
+.footer-row:last-child {
+    height: 58px;
+    align-items: center;
+}
+
+.footer-column {
+    width: 450px;
+}
+
+.footer-column:nth-child(1) {
+    width: 220px;
+}
+
+.footer-column:nth-child(3) {
+    width: 368px;
+}
+
+.footer-adress input {
+    display: block;
+}
+
+.footer-info:first-child {
+    margin-right: 103px;
+}
+
+.footer-adress {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #212121;
+}
+
+.footer-info {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.86;
+    letter-spacing: 0.7px;
+    color: #212121;
+    text-transform: uppercase;
+}
+
+.email {
+        width: 370px;
+        height: 48px;
+        border: 1px solid #d9dee1;
+        background-color: #ffffff;
+        text-indent: 19px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        color: #6c6c6c;
+}
+
+.email:focus {
+    background-color: #f5f3eb;
+}
+
+.footer-copyleft,
+.footer-copyright {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2.17;
+    letter-spacing: 0.6px;
+    color: #6c6c6c;
+    text-transform: uppercase;
+}
+
